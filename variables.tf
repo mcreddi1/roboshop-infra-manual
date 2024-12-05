@@ -1,22 +1,22 @@
 variable "instances" {
-  type        = map
-  default     = {
-    mongodb = "t3.small"
-    redis = "t3.micro"
-    mysql = "t3.small"
-    rabbitmq = "t3.micro"
-    catalogue = "t3.micro"
-    user = "t3.micro"
-    cart = "t3.micro"
-    shipping = "t3.small"
-    payment = "t3.micro"
-    dispatch = "t3.micro"
-    frontend = "t3.micro"
+  type = map(any)
+  default = {
+    mongodb   = "t2.micro"
+    redis     = "t2.micro"
+    mysql     = "t2.micro"
+    rabbitmq  = "t2.micro"
+    catalogue = "t2.micro"
+    user      = "t2.micro"
+    cart      = "t2.micro"
+    shipping  = "t2.micro"
+    payment   = "t2.micro"
+    dispatch  = "t2.micro"
+    frontend  = "t2.micro"
   }
 }
 
 variable "allow_all" {
-  type = string
+  type    = string
   default = "sg-0b764df7602aee442"
 }
 
